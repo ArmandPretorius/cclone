@@ -1,0 +1,7 @@
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\bin\Debug\netstandard2.0\cclone.deps.json
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\bin\Debug\netstandard2.0\cclone.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.csprojAssemblyReference.cache
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.AssemblyInfoInputs.cache
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.AssemblyInfo.cs

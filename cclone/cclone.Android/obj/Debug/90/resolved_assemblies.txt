@@ -6,6 +6,9 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cc
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Plugin.CurrentActivity.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Plugin.Media.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.IO.Compression.dll

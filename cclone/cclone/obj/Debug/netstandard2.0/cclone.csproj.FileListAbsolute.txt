@@ -7,7 +7,7 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cc
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.AssemblyInfo.cs
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\bin\Debug\netstandard2.0\ref\cclone.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\bin\Debug\netstandard2.0\cclone.pdb
-C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\ref\cclone.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\cclone.pdb
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone\obj\Debug\netstandard2.0\XamlC.stamp

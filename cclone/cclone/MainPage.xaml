@@ -11,6 +11,11 @@
         <Label x:Name="titleResult" Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+
+
+        <Image x:Name="image"/>
+        <Button x:Name="takeimagebutton" Text="Take Photo" Clicked="Image_Clicked"/>
+        <Button x:Name="Pickbutton" Text="Pick Photo" Clicked="Pickbutton_Clicked"/>
     </StackLayout>
 
 </ContentPage>

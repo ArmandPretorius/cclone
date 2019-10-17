@@ -31,18 +31,18 @@ namespace cclone
         public async void Main(string file)
         {
 
-            var image = "https://samples.clarifai.com/celebrity.jpeg";
+           // var image = "https://samples.clarifai.com/celebrity.jpeg";
 
             var client = new ClarifaiClient("64a64aff0198437781affe9a9ea31803");
 
                 var res = await client.PublicModels.CelebrityModel
-                 .Predict(new ClarifaiURLImage(image))
+                 .Predict(new ClarifaiFileImage(File.ReadAllBytes(file)))
                .ExecuteAsync();
 
                 // Print the concepts
                 foreach (var faceConcepts in res.Get().Data)
                 {
-                    Console.WriteLine($"{faceConcepts.Concepts[0].Name}");
+                    Console.WriteLine($"________________________________________________________________________________________________________{faceConcepts.Concepts[0].Name}");
                     // celebName = faceConcepts.Concepts[0].Name;
                     titleResult.Text = faceConcepts.Concepts[0].Name;
                     //foreach(var concept in faceConcepts.Concepts)
@@ -51,7 +51,7 @@ namespace cclone
                     //}
 
                 }
-                await DisplayAlert("No Camera", $":( {titleResult.Text}.", "OK");
+                await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
            
         }
 
@@ -68,12 +68,20 @@ namespace cclone
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
             {
-                Directory = "Sample",
-                Name = "test.jpg"
+                Directory = "CClone",
+                SaveToAlbum = true
             });
 
             if (file == null)
                 return;
+
+            //Get the public album path
+            var aPpath = file.AlbumPath;
+
+            //Get private path
+            var path = file.Path;
+
+            Main(aPpath);
 
             await DisplayAlert("File Location", file.Path, "OK");
 
@@ -83,7 +91,7 @@ namespace cclone
                 return stream;
             });
 
-           // Main(file.Path);
+            
 
         }
 
@@ -103,12 +111,17 @@ namespace cclone
             if (file == null)
                 return;
 
+            Main(file.Path);
+
+
             image.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
             });
+          
+            //  Main();
         }
     }
 }

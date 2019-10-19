@@ -6,13 +6,21 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
+//Clarifai AI API
 using Clarifai.API;
 using Clarifai.DTOs.Inputs;
 using Clarifai.DTOs.Predictions;
+
+//Media Permission Plugin
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
+
+//Azure Bing Image Search
+using Microsoft.Azure.CognitiveServices.Search.ImageSearch;
+using Microsoft.Azure.CognitiveServices.Search.ImageSearch.Models;
 
 
 namespace cclone
@@ -25,10 +33,10 @@ namespace cclone
         public MainPage()
         {
             InitializeComponent();
-           // Main();
         }
 
-        public async void Main(string file)
+        //Use Clarifai AI to search for celebrity look alike
+        public async void FindClone(string file)
         {
 
            // var image = "https://samples.clarifai.com/celebrity.jpeg";
@@ -42,20 +50,56 @@ namespace cclone
                 // Print the concepts
                 foreach (var faceConcepts in res.Get().Data)
                 {
-                    Console.WriteLine($"________________________________________________________________________________________________________{faceConcepts.Concepts[0].Name}");
-                    // celebName = faceConcepts.Concepts[0].Name;
-                    titleResult.Text = faceConcepts.Concepts[0].Name;
-                    //foreach(var concept in faceConcepts.Concepts)
-                    //{
-                    //    Console.WriteLine($"{concept.Name}:{concept.Value}");
-                    //}
+                    Console.WriteLine($"{faceConcepts.Concepts[0].Name}");
 
-                }
+                    //Set label equal to result and value
+                    try 
+                    {
+                        titleResult.Text = faceConcepts.Concepts[0].Name + " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
+
+                        SearchCelebImage(faceConcepts.Concepts[0].Name);
+                    } catch
+                    {
+                        titleResult.Text = "Sorry! We couldn't find a CClone.";
+                    }
+                        
+                    
+                
+                //foreach(var concept in faceConcepts.Concepts)
+                //{
+                //    Console.WriteLine($"{concept.Name}:{concept.Value}");
+                //}
+
+            }
                 await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
            
         }
 
+        public void SearchCelebImage(string celebrityResult)
+        {
+            //Azure Conginitive Services CClone Subscription Key
+            string subscriptionKey = "32dcbd11530d42b69bedde7961c05e5a";
 
+            //Save image result here
+            Images imageResults = null;
+
+            var client = new ImageSearchClient(new ApiKeyServiceClientCredentials(subscriptionKey));
+
+            //Find results and set here.
+            imageResults = client.Images.SearchAsync(query: celebrityResult).Result; //search query
+
+            if(imageResults != null)
+            {
+                var firstImageResult = imageResults.Value.First();
+                Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
+                image.Source = firstImageResult.ContentUrl;
+            }
+           
+
+        }
+
+
+        //Button that takes photo
         public async void Image_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -81,7 +125,7 @@ namespace cclone
             //Get private path
             var path = file.Path;
 
-            Main(aPpath);
+            FindClone(aPpath);
 
             await DisplayAlert("File Location", file.Path, "OK");
 
@@ -95,6 +139,8 @@ namespace cclone
 
         }
 
+
+        //Button that picks photo from library
         private async void Pickbutton_Clicked(object sender, EventArgs e)
         {
             if (!CrossMedia.Current.IsPickPhotoSupported)
@@ -111,7 +157,7 @@ namespace cclone
             if (file == null)
                 return;
 
-            Main(file.Path);
+            FindClone(file.Path);
 
 
             image.Source = ImageSource.FromStream(() =>

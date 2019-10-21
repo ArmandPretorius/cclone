@@ -169,5 +169,10 @@ namespace cclone
           
             //  Main();
         }
+
+        private void InfoButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new InfoPage());
+        }
     }
 }

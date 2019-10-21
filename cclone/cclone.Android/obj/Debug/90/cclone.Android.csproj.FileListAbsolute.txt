@@ -555,3 +555,7 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cc
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.Text.RegularExpressions.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.Threading.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\System.Xml.ReaderWriter.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\res\drawable\background.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\res\drawable\takephoto.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\res\drawable\close.png
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\res\drawable\info.png

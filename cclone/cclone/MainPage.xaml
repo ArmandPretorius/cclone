@@ -4,18 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="cclone.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
+             x:Class="cclone.MainPage"
+            BackgroundImageSource="background"
+            NavigationPage.HasNavigationBar="False"
+             >
+    <StackLayout Padding="10">
+        <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
         <Label x:Name="titleResult" Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-
+           VerticalOptions="CenterAndExpand" 
+           TextColor="#D1E5FA"
+           FontSize="Large"/>
 
         <Image x:Name="image"/>
-        <Button x:Name="takeimagebutton" Text="Take Photo" Clicked="Image_Clicked"/>
-        <Button x:Name="Pickbutton" Text="Pick Photo" Clicked="Pickbutton_Clicked"/>
+        <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>
+        <Button x:Name="Pickbutton" Text="Pick Photo from Library" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA"/>
     </StackLayout>
 
 </ContentPage>

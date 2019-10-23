@@ -10,13 +10,20 @@
              >
     <StackLayout Padding="10">
         <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
-        <Label x:Name="titleResult" Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" 
+        
+        <Label x:Name="titleResult" Text="Take a photo and find your Celebrity Clone" 
+           VerticalOptions="StartAndExpand" 
            TextColor="#D1E5FA"
-           FontSize="Large"/>
+           FontSize="Large"
+           Margin="0,30,0,30"
+           HorizontalTextAlignment="Center"/>
 
         <Image x:Name="image"/>
+        <!--<Image>
+            <Image.Source>
+                <UriImageSource Uri="{Binding ProductImage}" />
+            </Image.Source>
+        </Image>-->
         <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>
         <Button x:Name="Pickbutton" Text="Pick Photo from Library" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA"/>
     </StackLayout>

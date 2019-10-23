@@ -22,7 +22,7 @@
                 You can read more about the Clarifai’s Privacy Policy here: 
             </Label>
 
-            <Button TextColor="#D1E5FA" Text="https://www.clarifai.com/privacy" BackgroundColor="Transparent"></Button>
+            <Button TextColor="#D1E5FA" Text="https://www.clarifai.com/privacy" BackgroundColor="Transparent" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

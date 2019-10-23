@@ -21,7 +21,7 @@ using Plugin.Permissions.Abstractions;
 //Azure Bing Image Search
 using Microsoft.Azure.CognitiveServices.Search.ImageSearch;
 using Microsoft.Azure.CognitiveServices.Search.ImageSearch.Models;
-
+using System.Net;
 
 namespace cclone
 {
@@ -55,13 +55,15 @@ namespace cclone
                     //Set label equal to result and value
                     try 
                     {
-                        titleResult.Text = faceConcepts.Concepts[0].Name + " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
+                    titleResult.Text = faceConcepts.Concepts[0].Name;
+                        //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
 
                         SearchCelebImage(faceConcepts.Concepts[0].Name);
-                    } catch
-                    {
-                        titleResult.Text = "Sorry! We couldn't find a CClone.";
-                    }
+
+                } catch
+                {
+                    titleResult.Text = "Sorry! We couldn't find a CClone.";
+                }
                         
                     
                 
@@ -71,9 +73,23 @@ namespace cclone
                 //}
 
             }
-                await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
+              //  await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
            
         }
+
+        //search celebrity photo
+
+        public Xamarin.Forms.ImageSource PhotoStream { get; set; }
+
+
+        public class vmProduct
+        {
+            public vmProduct() { }
+            /* removed other properties, constructors etc */
+            public Uri ProductImage { get; set; }
+        }
+
+
 
         public void SearchCelebImage(string celebrityResult)
         {
@@ -92,9 +108,41 @@ namespace cclone
             {
                 var firstImageResult = imageResults.Value.First();
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
-                image.Source = firstImageResult.ContentUrl;
+
+                // image.Source = firstImageResult.ThumbnailUrl;
+
+
+                // PhotoStream = ImageSource.FromStream(() => MemoryStream(url));
+
+                // image.Source = PhotoStream;
+
+                //var cool = new vmProduct
+                //{
+                //    ProductImage = new Uri(firstImageResult.ContentUrl)
+                //};
+
+
+
+
+                //image.Source = ImageSource.FromStream(() =>
+                //{
+                //    var stream = url.AbsoluteUri;
+                //    return stream;
+                //});
+
+                //var i = new BitmapImage(new Uri(firstImageResult.ContentUrl));
+                //i.ImageOpened += (s, e) =>
+                //{
+                //    image.CreateOptions = BitmapCreateOptions.None;
+                //    WriteableBitmap wb = new WriteableBitmap(i);
+                //    MemoryStream ms = new MemoryStream();
+                //    wb.SaveJpeg(ms, i.PixelWidth, i.PixelHeight, 0, 100);
+                //    byte[] imageBytes = ms.ToArray();
+                //};
+                //NLBI.Thumbnail.Source = i;
+
+                //image.Source = url;
             }
-           
 
         }
 
@@ -110,10 +158,11 @@ namespace cclone
                 return;
             }
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
+                DefaultCamera = Plugin.Media.Abstractions.CameraDevice.Front,
                 Directory = "CClone",
-                SaveToAlbum = true
+                SaveToAlbum = true,
             });
 
             if (file == null)
@@ -127,7 +176,7 @@ namespace cclone
 
             FindClone(aPpath);
 
-            await DisplayAlert("File Location", file.Path, "OK");
+           // await DisplayAlert("File Location", file.Path, "OK");
 
             image.Source = ImageSource.FromStream(() =>
             {
@@ -150,7 +199,7 @@ namespace cclone
             }
             var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
             {
-                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Large,
 
             });
 
@@ -167,7 +216,7 @@ namespace cclone
                 return stream;
             });
           
-            //  Main();
+   
         }
 
         private void InfoButton_Clicked(object sender, EventArgs e)

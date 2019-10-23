@@ -17,9 +17,17 @@ namespace cclone
             InitializeComponent();
         }
 
+      
+
         private void CloseButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+            Device.OpenUri(new Uri("https://www.clarifai.com/privacy"));
         }
     }
 }

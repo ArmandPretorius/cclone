@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Plugin.CurrentActivity;
+using FFImageLoading.Forms;
 
 namespace cclone.Droid
 {
@@ -19,6 +20,9 @@ namespace cclone.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+            //load images
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
 
             Bundle bundle = null;
             CrossCurrentActivity.Current.Init(this, bundle);

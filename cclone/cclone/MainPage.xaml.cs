@@ -33,6 +33,7 @@ namespace cclone
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         //Use Clarifai AI to search for celebrity look alike
@@ -79,18 +80,6 @@ namespace cclone
 
         //search celebrity photo
 
-        public Xamarin.Forms.ImageSource PhotoStream { get; set; }
-
-
-        public class vmProduct
-        {
-            public vmProduct() { }
-            /* removed other properties, constructors etc */
-            public Uri ProductImage { get; set; }
-        }
-
-
-
         public void SearchCelebImage(string celebrityResult)
         {
             //Azure Conginitive Services CClone Subscription Key
@@ -104,15 +93,26 @@ namespace cclone
             //Find results and set here.
             imageResults = client.Images.SearchAsync(query: celebrityResult).Result; //search query
 
-            if(imageResults != null)
+        
+            if (imageResults != null)
             {
                 var firstImageResult = imageResults.Value.First();
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
 
-                // image.Source = firstImageResult.ThumbnailUrl;
+                celebImage.Source = firstImageResult.ContentUrl;
+
+                // image.Source = new UriImageSource(firstImageResult.ContentUrl);
+
+                //image.Source = new UriImageSource().FromUri(firstImageResult.ContentUrl);
+                //image.Source = FromUri(firstImageResult.ContentUrl);
+
+                //var imageSource = new UriImageSource { Uri = new Uri(firstImageResult.ContentUrl) };
+                //imageSource.CachingEnabled = false;
+                //imageSource.CacheValidity = TimeSpan.FromHours(1);
+                //image.Source = imageSource;
 
 
-                // PhotoStream = ImageSource.FromStream(() => MemoryStream(url));
+                //PhotoStream = ImageSource.FromStream(() => MemoryStream(imageSource));
 
                 // image.Source = PhotoStream;
 
@@ -126,7 +126,7 @@ namespace cclone
 
                 //image.Source = ImageSource.FromStream(() =>
                 //{
-                //    var stream = url.AbsoluteUri;
+                //    var stream = firstImageResult.ContentUrl.GetStream();
                 //    return stream;
                 //});
 
@@ -178,7 +178,7 @@ namespace cclone
 
            // await DisplayAlert("File Location", file.Path, "OK");
 
-            image.Source = ImageSource.FromStream(() =>
+            celebImage.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 return stream;
@@ -199,7 +199,7 @@ namespace cclone
             }
             var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
             {
-                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Large,
+                //PhotoSize = Plugin.Media.Abstractions.PhotoSize.Large,
 
             });
 
@@ -209,7 +209,7 @@ namespace cclone
             FindClone(file.Path);
 
 
-            image.Source = ImageSource.FromStream(() =>
+            celebImage.Source = ImageSource.FromStream(() =>
             {
                 var stream = file.GetStream();
                 file.Dispose();

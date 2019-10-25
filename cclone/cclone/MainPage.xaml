@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
              x:Class="cclone.MainPage"
             BackgroundImageSource="background"
@@ -18,6 +19,12 @@
            Margin="0,30,0,30"
            HorizontalTextAlignment="Center"/>
 
+        <ffimageloading:CachedImage x:Name="celebImage" HorizontalOptions="Center" VerticalOptions="Center"
+			WidthRequest="300" HeightRequest="300"
+			DownsampleToViewSize="true"
+			Source = "https://samples.clarifai.com/celebrity.jpeg">
+        </ffimageloading:CachedImage>
+        
         <Image x:Name="image"/>
         <!--<Image>
             <Image.Source>

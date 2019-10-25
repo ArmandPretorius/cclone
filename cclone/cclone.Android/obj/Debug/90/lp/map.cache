@@ -1,7 +1,13 @@
+FFImageLoading.Forms.Platform
+FFImageLoading.Platform
+FFImageLoading.Svg.Forms
+FFImageLoading.Svg.Platform
+FFImageLoading.Transformations
 FormsViewGroup
 Plugin.CurrentActivity
 Plugin.Media
 Plugin.Permissions
+SkiaSharp
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

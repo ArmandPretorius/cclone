@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              mc:Ignorable="d"
              x:Class="cclone.MainPage"
             BackgroundImageSource="background"
@@ -13,26 +14,43 @@
         <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
         
         <Label x:Name="titleResult" Text="Take a photo and find your Celebrity Clone" 
-           VerticalOptions="StartAndExpand" 
+           VerticalOptions="Start" 
            TextColor="#D1E5FA"
            FontSize="Large"
            Margin="0,30,0,30"
            HorizontalTextAlignment="Center"/>
 
-        <ffimageloading:CachedImage x:Name="celebImage" HorizontalOptions="Center" VerticalOptions="Center"
-			WidthRequest="300" HeightRequest="300"
+        <RelativeLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ffimageloading:CachedImage x:Name="bgimage1" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" Margin="15,15,0,0"
+			WidthRequest="130" HeightRequest="130"
 			DownsampleToViewSize="true"
-			Source = "https://samples.clarifai.com/celebrity.jpeg">
-        </ffimageloading:CachedImage>
-        
-        <Image x:Name="image"/>
-        <!--<Image>
-            <Image.Source>
-                <UriImageSource Uri="{Binding ProductImage}" />
-            </Image.Source>
-        </Image>-->
+			Source = "https://walker-web.imgix.net/cms/Gradient_builder_2.jpg"  IsVisible="False">
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage x:Name="bgimage2" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" Margin="30,30,0,0"
+			WidthRequest="100" HeightRequest="100"
+			DownsampleToViewSize="true"
+			Source = "https://walker-web.imgix.net/cms/Gradient_builder_2.jpg" IsVisible="False">
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            <ffimageloading:CachedImage x:Name="celebImage" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill"
+			WidthRequest="160" HeightRequest="160"
+			DownsampleToViewSize="true"
+			>
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+
+        </RelativeLayout>
+       
         <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>
         <Button x:Name="Pickbutton" Text="Pick Photo from Library" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA"/>
+        <Button x:Name="againbutton" Text="Again?" Clicked="Again_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA" IsVisible="False"/>
     </StackLayout>
 
 </ContentPage>

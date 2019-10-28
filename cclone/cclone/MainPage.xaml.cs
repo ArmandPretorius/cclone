@@ -33,14 +33,18 @@ namespace cclone
         public MainPage()
         {
             InitializeComponent();
-            
         }
 
         //Use Clarifai AI to search for celebrity look alike
         public async void FindClone(string file)
         {
 
-           // var image = "https://samples.clarifai.com/celebrity.jpeg";
+            titleResult.IsVisible = false;
+            InfoButton.IsVisible = false;
+            Pickbutton.IsVisible = false;
+            takeimagebutton.IsVisible = false;
+
+            // var image = "https://samples.clarifai.com/celebrity.jpeg";
 
             var client = new ClarifaiClient("64a64aff0198437781affe9a9ea31803");
 
@@ -48,18 +52,31 @@ namespace cclone
                  .Predict(new ClarifaiFileImage(File.ReadAllBytes(file)))
                .ExecuteAsync();
 
-                // Print the concepts
-                foreach (var faceConcepts in res.Get().Data)
+
+            // Print the concepts
+            foreach (var faceConcepts in res.Get().Data)
                 {
-                    Console.WriteLine($"{faceConcepts.Concepts[0].Name}");
+                //
+                Console.WriteLine($"{faceConcepts.Concepts[0].Name}");
 
                     //Set label equal to result and value
                     try 
                     {
-                    titleResult.Text = faceConcepts.Concepts[0].Name;
-                        //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
+                    SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
 
-                        SearchCelebImage(faceConcepts.Concepts[0].Name);
+                    titleResult.IsVisible = true;
+
+                    titleResult.Text = faceConcepts.Concepts[0].Name;  //set title equal to celeb name
+                                                                       //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
+
+                    InfoButton.IsVisible = true;
+                    againbutton.IsVisible = true;
+                    //
+                    //if (faceConcepts.Concepts[0].Name == null || faceConcepts == null || faceConcepts.Concepts == null)
+                    //{
+                    //    titleResult.IsVisible = true;
+                    //    titleResult.Text = "Sorry! We couldn't find a CClone.";
+                    //}
 
                 } catch
                 {
@@ -92,7 +109,6 @@ namespace cclone
 
             //Find results and set here.
             imageResults = client.Images.SearchAsync(query: celebrityResult).Result; //search query
-
         
             if (imageResults != null)
             {
@@ -121,9 +137,6 @@ namespace cclone
                 //    ProductImage = new Uri(firstImageResult.ContentUrl)
                 //};
 
-
-
-
                 //image.Source = ImageSource.FromStream(() =>
                 //{
                 //    var stream = firstImageResult.ContentUrl.GetStream();
@@ -142,7 +155,7 @@ namespace cclone
                 //NLBI.Thumbnail.Source = i;
 
                 //image.Source = url;
-            }
+            } 
 
         }
 
@@ -176,7 +189,8 @@ namespace cclone
 
             FindClone(aPpath);
 
-           // await DisplayAlert("File Location", file.Path, "OK");
+            // await DisplayAlert("File Location", file.Path, "OK");
+
 
             celebImage.Source = ImageSource.FromStream(() =>
             {
@@ -184,7 +198,7 @@ namespace cclone
                 return stream;
             });
 
-            
+            LoadingAnimation();
 
         }
 
@@ -205,9 +219,8 @@ namespace cclone
 
             if (file == null)
                 return;
-
+           
             FindClone(file.Path);
-
 
             celebImage.Source = ImageSource.FromStream(() =>
             {
@@ -215,13 +228,36 @@ namespace cclone
                 file.Dispose();
                 return stream;
             });
-          
-   
+
+            LoadingAnimation();
         }
 
         private void InfoButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new InfoPage());
+           // LoadingAnimation();
         }
+
+        private void LoadingAnimation()
+        {
+            bgimage1.IsVisible = true;
+            bgimage2.IsVisible = true;
+            bgimage1.ScaleTo(2, 8000, Easing.SinInOut);
+            bgimage1.RelRotateTo(360, 16000, Easing.SinInOut);
+            bgimage2.ScaleTo(2, 8000, Easing.SinInOut);
+            bgimage2.RelRotateTo(-360, 16000, Easing.SinInOut);
+        }
+
+        private void Again_Clicked(object sender, EventArgs e)
+        {
+            Pickbutton.IsVisible = true;
+            takeimagebutton.IsVisible = true;
+            againbutton.IsVisible = false;
+            bgimage1.IsVisible = false;
+            bgimage2.IsVisible = false;
+            celebImage.Source = "";
+            titleResult.Text = "Take a photo and find your Celebrity Clone";
+        }
+        
     }
 }

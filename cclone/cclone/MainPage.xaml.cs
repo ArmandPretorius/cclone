@@ -30,6 +30,7 @@ namespace cclone
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+
         public MainPage()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace cclone
                  .Predict(new ClarifaiFileImage(File.ReadAllBytes(file)))
                .ExecuteAsync();
 
+            ResultAnimation();
 
             // Print the concepts
             foreach (var faceConcepts in res.Get().Data)
@@ -65,9 +67,10 @@ namespace cclone
                     {
                     
                     SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
-                    ResultAnimation();
+
+                   
                     //loader.IsRunning = false;
-                    StopLoadingAnimation();
+                    
 
                     titleResult.IsVisible = true;
 
@@ -121,7 +124,7 @@ namespace cclone
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
 
                 celebImage.Source = firstImageResult.ContentUrl;
-                
+                StopLoadingAnimation();
 
                 // image.Source = new UriImageSource(firstImageResult.ContentUrl);
 
@@ -255,10 +258,11 @@ namespace cclone
         private void LoadingAnimation()
         {
             bgimageloading.IsVisible = true;
-            bgimageloading.ScaleTo(2, 1000);
-            bgimageloading.RelRotateTo(720, 16000);
+            bgimageloading.ScaleTo(2, 3000);
+            bgimageloading.RelRotateTo(360, 30000);
         }
 
+        
         private void StopLoadingAnimation()
         {
             bgimageloading.ScaleTo(1, 1000);

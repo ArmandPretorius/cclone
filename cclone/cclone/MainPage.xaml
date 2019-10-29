@@ -49,11 +49,11 @@
                                         HorizontalOptions="Center" 
                                         VerticalOptions="Center" 
                                         Aspect="AspectFill" 
-                                        Margin="15,15,0,0"
-			                            WidthRequest="130" 
-                                        HeightRequest="130"
+                                        Margin="30,30,0,0"
+			                            WidthRequest="100" 
+                                        HeightRequest="100"
 			                            DownsampleToViewSize="true"
-			                            Source = "done"  
+			                            Source = "load"  
                                         IsVisible="False">
                 <ffimageloading:CachedImage.Transformations>
                     <fftransformations:CircleTransformation/>

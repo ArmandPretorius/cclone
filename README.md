@@ -40,7 +40,7 @@
 ## About The Project
 
 
-<img src="nudge_screenshot.png" alt="Logo" width="180">
+<img src="nudge_screenshot.png" alt="About Project CClone" width="180">
 
 CClone is an Android application that uses Artificial Intelligence to find your celebrity look-alike. All you need to do is take a photo or select one from your camera roll.
 
@@ -78,14 +78,14 @@ There is also an information button in the top right corner that opens a Terms a
 <!-- HOW DOES IT WORK -->
 ## Logic
 
-*The application uses [Clarifai's Computer Vision Technology](https://www.clarifai.com/technology) to compare your image to more than 10 000 celebrities using their trained [Celebrity Model](https://www.clarifai.com/models/celebrity-image-recognition-model-e466caa0619f444ab97497640cefc4dc). Xamarin Forms has a NuGet package to help with this comparison.
+* The application uses [Clarifai's Computer Vision Technology](https://www.clarifai.com/technology) to compare your image to more than 10 000 celebrities using their trained [Celebrity Model](https://www.clarifai.com/models/celebrity-image-recognition-model-e466caa0619f444ab97497640cefc4dc). Xamarin Forms has a NuGet package to help with this comparison.
 
-*The project also uses one of [Microsoft Azure's Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), [Bing Image Search](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/), to find a picture of your celebrity clone.
+*  project also uses one of [Microsoft Azure's Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), [Bing Image Search](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/), to find a picture of your celebrity clone.
 
 
-*The images are displayed using a NuGet Package called [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading).
+* The images are displayed using a NuGet Package called [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading).
 
-*The NuGet Package used to use the device's camera and access the camera roll, is called [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin).
+* The NuGet Package used to use the device's camera and access the camera roll, is called [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin).
 
 
 <!-- Changes Made -->
@@ -97,13 +97,15 @@ There is also an information button in the top right corner that opens a Terms a
 
 * I also would like to display more than one match (second and third match).
 
+* I'd also like to finish it for iOS as well.
+
 
 <!-- CONTACT -->
 ## Contact
 
 Armand Pretorius - 170045@virtualwindow.co.za
 
-Project Link: [https://github.com/ArmandPretorius/nudge](https://github.com/ArmandPretorius/cclone)
+Project Link: [https://github.com/ArmandPretorius/cclone](https://github.com/ArmandPretorius/cclone)
 
 
 

@@ -40,6 +40,7 @@ namespace cclone
         public async void FindClone(string file)
         {
             //loader.IsRunning = true;
+           LoadingAnimation();
             
             titleResult.IsVisible = false;
             InfoButton.IsVisible = false;
@@ -54,8 +55,6 @@ namespace cclone
                  .Predict(new ClarifaiFileImage(File.ReadAllBytes(file)))
                .ExecuteAsync();
 
-            ResultAnimation();
-
             // Print the concepts
             foreach (var faceConcepts in res.Get().Data)
                 {
@@ -65,12 +64,12 @@ namespace cclone
                     //Set label equal to result and value
                     try 
                     {
-                    
-                    SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
 
-                   
-                    //loader.IsRunning = false;
+                    SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
                     
+
+                    //loader.IsRunning = false;
+
 
                     titleResult.IsVisible = true;
 
@@ -99,8 +98,12 @@ namespace cclone
                 //}
 
             }
-              //  await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
-           
+            //  await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
+
+            bgimage1.IsVisible = true;
+
+            await bgimage1.ScaleTo(3, 5000, Easing.SpringOut);
+            await bgimage1.RelRotateTo(10, 5000, Easing.SinInOut);
         }
 
         //search celebrity photo
@@ -122,9 +125,14 @@ namespace cclone
             {
                 var firstImageResult = imageResults.Value.First();
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
-
-                celebImage.Source = firstImageResult.ContentUrl;
-                StopLoadingAnimation();
+                try
+                {
+                    celebImage.Source = firstImageResult.ContentUrl;
+                } catch
+                {
+                    celebImage.Source = firstImageResult.ThumbnailUrl;
+                }
+               
 
                 // image.Source = new UriImageSource(firstImageResult.ContentUrl);
 
@@ -164,7 +172,9 @@ namespace cclone
                 //NLBI.Thumbnail.Source = i;
 
                 //image.Source = url;
-            } 
+            }
+
+            StopLoadingAnimation();
 
         }
 
@@ -207,7 +217,7 @@ namespace cclone
                 return stream;
             });
 
-            LoadingAnimation();
+            //LoadingAnimation();
 
         }
 
@@ -238,7 +248,7 @@ namespace cclone
                 return stream;
             });
 
-            LoadingAnimation();
+            //LoadingAnimation();
         }
 
         private void InfoButton_Clicked(object sender, EventArgs e)
@@ -251,7 +261,7 @@ namespace cclone
         {
             bgimage1.IsVisible = true;
             bgimage1.ScaleTo(3, 5000, Easing.SpringOut);
-            bgimage1.RelRotateTo(10, 5000, Easing.SinInOut);
+            bgimage1.RelRotateTo(13, 5000, Easing.SinInOut);
           
         }
 

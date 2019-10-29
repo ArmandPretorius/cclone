@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
               xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
              mc:Ignorable="d"
              x:Class="cclone.MainPage"
             BackgroundImageSource="background"
@@ -20,33 +21,63 @@
            Margin="0,30,0,30"
            HorizontalTextAlignment="Center"/>
 
-        <RelativeLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <ffimageloading:CachedImage x:Name="bgimage1" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" Margin="15,15,0,0"
-			WidthRequest="130" HeightRequest="130"
-			DownsampleToViewSize="true"
-			Source = "https://walker-web.imgix.net/cms/Gradient_builder_2.jpg"  IsVisible="False">
+        <!--<lottie:AnimationView 
+	x:Name="animationView" 
+	Animation="help.json" 
+	Loop="True" 
+	AutoPlay="True"
+	VerticalOptions="FillAndExpand" 
+	HorizontalOptions="FillAndExpand" />-->
+
+        <RelativeLayout HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand">
+            <ffimageloading:CachedImage x:Name="bgimage1" 
+                                        HorizontalOptions="Center" 
+                                        VerticalOptions="Center" 
+                                        Aspect="AspectFill" 
+                                        Margin="15,15,0,0"
+			                            WidthRequest="130" 
+                                        HeightRequest="130"
+			                            DownsampleToViewSize="true"
+			                            Source = "done"  
+                                        IsVisible="False">
                 <ffimageloading:CachedImage.Transformations>
                     <fftransformations:CircleTransformation/>
                 </ffimageloading:CachedImage.Transformations>
             </ffimageloading:CachedImage>
-            <ffimageloading:CachedImage x:Name="bgimage2" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" Margin="30,30,0,0"
-			WidthRequest="100" HeightRequest="100"
-			DownsampleToViewSize="true"
-			Source = "https://walker-web.imgix.net/cms/Gradient_builder_2.jpg" IsVisible="False">
-                <ffimageloading:CachedImage.Transformations>
-                    <fftransformations:CircleTransformation/>
-                </ffimageloading:CachedImage.Transformations>
-            </ffimageloading:CachedImage>
-            <ffimageloading:CachedImage x:Name="celebImage" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Aspect="AspectFill"
-			WidthRequest="160" HeightRequest="160"
-			DownsampleToViewSize="true"
-			>
+            <ffimageloading:CachedImage x:Name="bgimageloading" 
+                                        HorizontalOptions="Center" 
+                                        VerticalOptions="Center" 
+                                        Aspect="AspectFill" 
+                                        Margin="15,15,0,0"
+			                            WidthRequest="130" 
+                                        HeightRequest="130"
+			                            DownsampleToViewSize="true"
+			                            Source = "done"  
+                                        IsVisible="False">
                 <ffimageloading:CachedImage.Transformations>
                     <fftransformations:CircleTransformation/>
                 </ffimageloading:CachedImage.Transformations>
             </ffimageloading:CachedImage>
 
+
+            <ffimageloading:CachedImage x:Name="celebImage" 
+                                        HorizontalOptions="CenterAndExpand" 
+                                        VerticalOptions="CenterAndExpand" 
+                                        Aspect="AspectFill"
+			                            WidthRequest="160" 
+                                        HeightRequest="160"
+			                            DownsampleToViewSize="true"                          >
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation/>
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+
+            
+            
         </RelativeLayout>
+        <!--<ActivityIndicator x:Name="loader" IsRunning="true" Color="Accent" HeightRequest="165" WidthRequest="165" Margin="0,50,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>-->
+        
        
         <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>
         <Button x:Name="Pickbutton" Text="Pick Photo from Library" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA"/>

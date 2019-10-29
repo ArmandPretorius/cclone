@@ -4,6 +4,8 @@ FFImageLoading.Svg.Forms
 FFImageLoading.Svg.Platform
 FFImageLoading.Transformations
 FormsViewGroup
+Lottie.Android
+Lottie.Forms
 Plugin.CurrentActivity
 Plugin.Media
 Plugin.Permissions

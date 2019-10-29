@@ -15,6 +15,28 @@
           "lib/netstandard1.3/Clarifai.dll": {}
         }
       },
+      "Com.Airbnb.iOS.Lottie/2.5.10": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.10",
+          "Xamarin.Forms": "4.2.0.815419"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        }
+      },
       "Microsoft.Azure.CognitiveServices.Search.ImageSearch/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -652,7 +674,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -734,7 +756,7 @@
           "lib/Xamarin.iOS10/FFImageLoading.Transformations.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.3.0.908675": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -862,16 +884,17 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Clarifai": "1.3.1",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "3.0.3",
           "Microsoft.Azure.CognitiveServices.Search.ImageSearch": "2.0.0",
           "SkiaSharp": "1.68.0",
           "Xam.Plugin.Media": "4.0.1.5",
-          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Essentials": "1.3.1",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.3.0.908675"
         },
         "compile": {
           "bin/placeholder/cclone.dll": {}
@@ -893,6 +916,28 @@
         },
         "runtime": {
           "lib/netstandard1.3/Clarifai.dll": {}
+        }
+      },
+      "Com.Airbnb.iOS.Lottie/2.5.10": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.10",
+          "Xamarin.Forms": "4.2.0.815419"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
         }
       },
       "Microsoft.Azure.CognitiveServices.Search.ImageSearch/2.0.0": {
@@ -1446,7 +1491,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1528,7 +1573,7 @@
           "lib/Xamarin.iOS10/FFImageLoading.Transformations.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.3.0.908675": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1656,16 +1701,17 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Clarifai": "1.3.1",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "3.0.3",
           "Microsoft.Azure.CognitiveServices.Search.ImageSearch": "2.0.0",
           "SkiaSharp": "1.68.0",
           "Xam.Plugin.Media": "4.0.1.5",
-          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Essentials": "1.3.1",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.3.0.908675"
         },
         "compile": {
           "bin/placeholder/cclone.dll": {}
@@ -1687,6 +1733,28 @@
         },
         "runtime": {
           "lib/netstandard1.3/Clarifai.dll": {}
+        }
+      },
+      "Com.Airbnb.iOS.Lottie/2.5.10": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.10",
+          "Xamarin.Forms": "4.2.0.815419"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
         }
       },
       "Microsoft.Azure.CognitiveServices.Search.ImageSearch/2.0.0": {
@@ -2243,7 +2311,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -2325,7 +2393,7 @@
           "lib/Xamarin.iOS10/FFImageLoading.Transformations.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.3.0.908675": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2453,16 +2521,17 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Clarifai": "1.3.1",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "3.0.3",
           "Microsoft.Azure.CognitiveServices.Search.ImageSearch": "2.0.0",
           "SkiaSharp": "1.68.0",
           "Xam.Plugin.Media": "4.0.1.5",
-          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Essentials": "1.3.1",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.3.0.908675"
         },
         "compile": {
           "bin/placeholder/cclone.dll": {}
@@ -2484,6 +2553,28 @@
         },
         "runtime": {
           "lib/netstandard1.3/Clarifai.dll": {}
+        }
+      },
+      "Com.Airbnb.iOS.Lottie/2.5.10": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.10",
+          "Xamarin.Forms": "4.2.0.815419"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
         }
       },
       "Microsoft.Azure.CognitiveServices.Search.ImageSearch/2.0.0": {
@@ -3040,7 +3131,7 @@
           "lib/xamarinios10/Plugin.Media.dll": {}
         }
       },
-      "Xamarin.Essentials/1.2.0": {
+      "Xamarin.Essentials/1.3.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -3122,7 +3213,7 @@
           "lib/Xamarin.iOS10/FFImageLoading.Transformations.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.3.0.908675": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -3250,16 +3341,17 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Clarifai": "1.3.1",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "3.0.3",
           "Microsoft.Azure.CognitiveServices.Search.ImageSearch": "2.0.0",
           "SkiaSharp": "1.68.0",
           "Xam.Plugin.Media": "4.0.1.5",
-          "Xamarin.Essentials": "1.2.0",
+          "Xamarin.Essentials": "1.3.1",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
-          "Xamarin.Forms": "4.2.0.709249"
+          "Xamarin.Forms": "4.3.0.908675"
         },
         "compile": {
           "bin/placeholder/cclone.dll": {}
@@ -3281,6 +3373,62 @@
         "clarifai.1.3.1.nupkg.sha512",
         "clarifai.nuspec",
         "lib/netstandard1.3/Clarifai.dll"
+      ]
+    },
+    "Com.Airbnb.iOS.Lottie/2.5.10": {
+      "sha512": "Ys4oHgtKApYji5qymfWdSU+W9zauC7ptovgN42P29p0yWpONQ4YTQ64DbK1y+0mr+67hqiek9tSOb4Tht65sEQ==",
+      "type": "package",
+      "path": "com.airbnb.ios.lottie/2.5.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.ios.lottie.2.5.10.nupkg.sha512",
+        "com.airbnb.ios.lottie.nuspec",
+        "icon.png",
+        "lib/xamarinios10/Lottie.iOS.dll",
+        "lib/xamarinios10/Lottie.iOS.pdb",
+        "lib/xamarinios10/Lottie.iOS.xml",
+        "lib/xamarinmac20/Lottie.iOS.dll",
+        "lib/xamarinmac20/Lottie.iOS.pdb",
+        "lib/xamarinmac20/Lottie.iOS.xml",
+        "lib/xamarintvos10/Lottie.iOS.dll",
+        "lib/xamarintvos10/Lottie.iOS.pdb",
+        "lib/xamarintvos10/Lottie.iOS.xml",
+        "readme.txt"
+      ]
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/3.0.3": {
+      "sha512": "Lf0Q4K5WiqjAJRH12BJUOCfoKIMiPWrpn7gMNBrX+6pwjSiSPE96EUakaag0Q2Xj5bn9vJ48lVXlRoVIjBAgCw==",
+      "type": "package",
+      "path": "com.airbnb.xamarin.forms.lottie/3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.xamarin.forms.lottie.3.0.3.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid90/Lottie.Forms.dll",
+        "lib/monoandroid90/Lottie.Forms.pdb",
+        "lib/monoandroid90/Lottie.Forms.xml",
+        "lib/netstandard2.0/Lottie.Forms.dll",
+        "lib/netstandard2.0/Lottie.Forms.pdb",
+        "lib/netstandard2.0/Lottie.Forms.xml",
+        "lib/tizen40/Lottie.Forms.dll",
+        "lib/tizen40/Lottie.Forms.pdb",
+        "lib/tizen40/Lottie.Forms.xml",
+        "lib/uap10.0.16299/Lottie.Forms.dll",
+        "lib/uap10.0.16299/Lottie.Forms.pdb",
+        "lib/uap10.0.16299/Lottie.Forms.pri",
+        "lib/uap10.0.16299/Lottie.Forms.xml",
+        "lib/xamarinios10/Lottie.Forms.dll",
+        "lib/xamarinios10/Lottie.Forms.pdb",
+        "lib/xamarinios10/Lottie.Forms.xml",
+        "lib/xamarinmac20/Lottie.Forms.dll",
+        "lib/xamarinmac20/Lottie.Forms.pdb",
+        "lib/xamarinmac20/Lottie.Forms.xml",
+        "readme.txt"
       ]
     },
     "Microsoft.Azure.CognitiveServices.Search.ImageSearch/2.0.0": {
@@ -6202,10 +6350,10 @@
         "xam.plugin.media.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.2.0": {
-      "sha512": "o3i5uAchUpAvAlJX0onYFFiDo6jpKl9vgvrdDtXEuEfum0UDrSx8oGGBUjlFyUoRpvWVumXwo0VS3AbzuwEofg==",
+    "Xamarin.Essentials/1.3.1": {
+      "sha512": "+51728AdZ/qtABGvcIaNXgEoL2jAtxAXLHS8PvGCP0pb6n7twBqYpfgkmwHYVgu+U99szgtL+Jot8L+OXorPcA==",
       "type": "package",
-      "path": "xamarin.essentials/1.2.0",
+      "path": "xamarin.essentials/1.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6233,6 +6381,9 @@
         "lib/netstandard2.0/Xamarin.Essentials.dll",
         "lib/netstandard2.0/Xamarin.Essentials.pdb",
         "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
         "lib/uap10.0.16299/Xamarin.Essentials.dll",
         "lib/uap10.0.16299/Xamarin.Essentials.pdb",
         "lib/uap10.0.16299/Xamarin.Essentials.pri",
@@ -6240,8 +6391,14 @@
         "lib/xamarinios10/Xamarin.Essentials.dll",
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.2.0.nupkg.sha512",
+        "xamarin.essentials.1.3.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -6451,10 +6608,10 @@
         "xamarin.ffimageloading.transformations.nuspec"
       ]
     },
-    "Xamarin.Forms/4.2.0.709249": {
-      "sha512": "3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
+    "Xamarin.Forms/4.3.0.908675": {
+      "sha512": "kXrbXKJvXYF4cKjs1Jsb+pQFEnFGl0AONYSeABjgOJqN/o5Y4zC0XXQ68xiUI81PKQTuRB5F3oDom2t5ccJDZw==",
       "type": "package",
-      "path": "xamarin.forms/4.2.0.709249",
+      "path": "xamarin.forms/4.3.0.908675",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6682,9 +6839,11 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/StepperControl.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
@@ -6693,7 +6852,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.2.0.709249.nupkg.sha512",
+        "xamarin.forms.4.3.0.908675.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -6706,16 +6865,17 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "Clarifai >= 1.3.1",
+      "Com.Airbnb.Xamarin.Forms.Lottie >= 3.0.3",
       "Microsoft.Azure.CognitiveServices.Search.ImageSearch >= 2.0.0",
       "SkiaSharp >= 1.68.0",
       "Xam.Plugin.Media >= 4.0.1.5",
-      "Xamarin.Essentials >= 1.2.0",
+      "Xamarin.Essentials >= 1.3.1",
       "Xamarin.FFImageLoading >= 2.4.11.982",
       "Xamarin.FFImageLoading.Forms >= 2.4.11.982",
       "Xamarin.FFImageLoading.Svg >= 2.4.11.982",
       "Xamarin.FFImageLoading.Svg.Forms >= 2.4.11.982",
       "Xamarin.FFImageLoading.Transformations >= 2.4.11.982",
-      "Xamarin.Forms >= 4.2.0.709249",
+      "Xamarin.Forms >= 4.3.0.908675",
       "cclone >= 1.0.0"
     ]
   },
@@ -6765,6 +6925,10 @@
             "target": "Package",
             "version": "[1.3.1, )"
           },
+          "Com.Airbnb.Xamarin.Forms.Lottie": {
+            "target": "Package",
+            "version": "[3.0.3, )"
+          },
           "Microsoft.Azure.CognitiveServices.Search.ImageSearch": {
             "target": "Package",
             "version": "[2.0.0, )"
@@ -6779,7 +6943,7 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.2.0, )"
+            "version": "[1.3.1, )"
           },
           "Xamarin.FFImageLoading": {
             "target": "Package",
@@ -6803,7 +6967,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.2.0.709249, )"
+            "version": "[4.3.0.908675, )"
           }
         }
       }

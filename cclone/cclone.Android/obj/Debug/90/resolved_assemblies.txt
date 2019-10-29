@@ -10,6 +10,8 @@ C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cc
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\FFImageLoading.Transformations.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Java.Interop.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Lottie.Android.dll
+C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Lottie.Forms.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Microsoft.Azure.CognitiveServices.Search.ImageSearch.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Microsoft.Rest.ClientRuntime.Azure.dll
 C:\Users\Armand Pretorius\Desktop\OWI_ThirdYear\IDV 300\Term 4\C-Clone\cclone\cclone\cclone.Android\obj\Debug\90\android\assets\Microsoft.Rest.ClientRuntime.dll

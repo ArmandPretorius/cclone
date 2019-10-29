@@ -13,6 +13,8 @@ public class MonoPackageManager_Resources {
 		"FFImageLoading.Svg.Platform.dll",
 		"FFImageLoading.Transformations.dll",
 		"FormsViewGroup.dll",
+		"Lottie.Android.dll",
+		"Lottie.Forms.dll",
 		"Microsoft.Azure.CognitiveServices.Search.ImageSearch.dll",
 		"Microsoft.Rest.ClientRuntime.Azure.dll",
 		"Microsoft.Rest.ClientRuntime.dll",

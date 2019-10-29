@@ -38,7 +38,8 @@ namespace cclone
         //Use Clarifai AI to search for celebrity look alike
         public async void FindClone(string file)
         {
-
+            //loader.IsRunning = true;
+            
             titleResult.IsVisible = false;
             InfoButton.IsVisible = false;
             Pickbutton.IsVisible = false;
@@ -62,11 +63,15 @@ namespace cclone
                     //Set label equal to result and value
                     try 
                     {
+                    
                     SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
+                    ResultAnimation();
+                    //loader.IsRunning = false;
+                    StopLoadingAnimation();
 
                     titleResult.IsVisible = true;
 
-                    titleResult.Text = faceConcepts.Concepts[0].Name;  //set title equal to celeb name
+                    titleResult.Text = faceConcepts.Concepts[0].Name.ToUpper();  //set title equal to celeb name
                                                                        //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
 
                     InfoButton.IsVisible = true;
@@ -116,6 +121,7 @@ namespace cclone
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
 
                 celebImage.Source = firstImageResult.ContentUrl;
+                
 
                 // image.Source = new UriImageSource(firstImageResult.ContentUrl);
 
@@ -238,23 +244,35 @@ namespace cclone
            // LoadingAnimation();
         }
 
-        private void LoadingAnimation()
+        private void ResultAnimation()
         {
             bgimage1.IsVisible = true;
-            bgimage2.IsVisible = true;
-            bgimage1.ScaleTo(2, 8000, Easing.SinInOut);
-            bgimage1.RelRotateTo(360, 16000, Easing.SinInOut);
-            bgimage2.ScaleTo(2, 8000, Easing.SinInOut);
-            bgimage2.RelRotateTo(-360, 16000, Easing.SinInOut);
+            bgimage1.ScaleTo(3, 5000, Easing.SpringOut);
+            bgimage1.RelRotateTo(10, 5000, Easing.SinInOut);
+          
+        }
+
+        private void LoadingAnimation()
+        {
+            bgimageloading.IsVisible = true;
+            bgimageloading.ScaleTo(2, 1000);
+            bgimageloading.RelRotateTo(720, 16000);
+        }
+
+        private void StopLoadingAnimation()
+        {
+            bgimageloading.ScaleTo(1, 1000);
+            bgimageloading.RelRotateTo(0, 1000);
+            bgimageloading.IsVisible = false;
         }
 
         private void Again_Clicked(object sender, EventArgs e)
         {
+            bgimage1.ScaleTo(1, 1000, Easing.BounceOut);
             Pickbutton.IsVisible = true;
             takeimagebutton.IsVisible = true;
             againbutton.IsVisible = false;
             bgimage1.IsVisible = false;
-            bgimage2.IsVisible = false;
             celebImage.Source = "";
             titleResult.Text = "Take a photo and find your Celebrity Clone";
         }

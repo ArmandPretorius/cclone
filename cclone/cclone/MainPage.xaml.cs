@@ -43,6 +43,8 @@ namespace cclone
            LoadingAnimation();
             
             titleResult.IsVisible = false;
+            descriptionText.IsVisible = false;
+            logoImage.IsVisible = false;
             InfoButton.IsVisible = false;
             Pickbutton.IsVisible = false;
             takeimagebutton.IsVisible = false;
@@ -72,6 +74,7 @@ namespace cclone
 
 
                     titleResult.IsVisible = true;
+                    titleResult.HorizontalTextAlignment = TextAlignment.Center;
 
                     titleResult.Text = faceConcepts.Concepts[0].Name.ToUpper();  //set title equal to celeb name
                                                                        //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
@@ -106,8 +109,7 @@ namespace cclone
             await bgimage1.RelRotateTo(10, 5000, Easing.SinInOut);
         }
 
-        //search celebrity photo
-
+        //search celebrity photo with Azur Bing Image Search
         public void SearchCelebImage(string celebrityResult)
         {
             //Azure Conginitive Services CClone Subscription Key
@@ -206,10 +208,8 @@ namespace cclone
             //Get private path
             var path = file.Path;
 
+            //call clarifai function
             FindClone(aPpath);
-
-            // await DisplayAlert("File Location", file.Path, "OK");
-
 
             celebImage.Source = ImageSource.FromStream(() =>
             {
@@ -288,7 +288,10 @@ namespace cclone
             againbutton.IsVisible = false;
             bgimage1.IsVisible = false;
             celebImage.Source = "";
-            titleResult.Text = "Take a photo and find your Celebrity Clone";
+            titleResult.HorizontalTextAlignment = TextAlignment.Start;
+            titleResult.Text = "Find your";
+            logoImage.IsVisible = true;
+            descriptionText.IsVisible = true;
         }
         
     }

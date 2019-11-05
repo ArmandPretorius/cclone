@@ -14,12 +14,19 @@
     <StackLayout Padding="10">
         <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
         
-        <Label x:Name="titleResult" Text="Take a photo and find your Celebrity Clone" 
+        <Label x:Name="titleResult" Text="Welcome to" 
            VerticalOptions="Start" 
            TextColor="#D1E5FA"
            FontSize="Large"
-           Margin="0,30,0,30"
-           HorizontalTextAlignment="Center"/>
+           Margin="20,30,0,0"
+           HorizontalTextAlignment="Start"/>
+        <Image x:Name="logoImage" 
+                                        HorizontalOptions="StartAndExpand" 
+                                        Aspect="Fill" 
+                                        Margin="0,0,0,0"
+			                            Source = "cclonelogo" >
+            
+        </Image>
 
         <!--<lottie:AnimationView 
 	x:Name="animationView" 
@@ -77,6 +84,12 @@
             
         </RelativeLayout>
         <!--<ActivityIndicator x:Name="loader" IsRunning="true" Color="Accent" HeightRequest="165" WidthRequest="165" Margin="0,50,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>-->
+        <Label x:Name="descriptionText" Text="Take a photo and find your Celebrity Clone" 
+           VerticalOptions="Start" 
+           TextColor="#D1E5FA"
+           FontSize="Small"
+           Margin="20,30,20,30"
+           HorizontalTextAlignment="Center"/>
         
        
         <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>

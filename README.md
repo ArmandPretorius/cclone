@@ -40,9 +40,9 @@
 ## About The Project
 
 
-<img src="/screenshots/home_screenshot.png" alt="About Project CClone" width="180">
-<img src="/screenshots/search_screenshot.png" alt="About Project CClone" width="180">
-<img src="/screenshots/result_screenshot.png" alt="About Project CClone" width="180">
+<img src="screenshots/home_screenshot.jpg" alt="About Project CClone" width="180">
+<img src="screenshots/search_screenshot.jpg" alt="About Project CClone" width="180">
+<img src="screenshots/result_screenshot.jpg" alt="About Project CClone" width="180">
 
 CClone is an Android application that uses Artificial Intelligence to find your celebrity look-alike. All you need to do is take a photo or select one from your camera roll.
 

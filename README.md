@@ -38,6 +38,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+|  |  |  |
 | --- | --- | --- |
 | <img src="screenshots/home_screenshot.jpg" alt="About Project CClone" width="180"> | <img src="screenshots/search_screenshot.jpg" alt="About Project CClone" width="180"> | <img src="screenshots/result_screenshot.jpg" alt="About Project CClone" width="180"> |
 

@@ -78,7 +78,7 @@ You can then select an "Again?" button to take another picture.
 There is also an information button in the top right corner that opens a Terms and Conditions modal, which explains Clarifai's <a href="https://www.clarifai.com/privacy">Privacy Policy</a> in regards of using your images.
 
 
-[View Demo]()
+[View Demo](https://youtu.be/1uwv4zY6aN4)
 <!-- HOW DOES IT WORK -->
 ## Logic
 

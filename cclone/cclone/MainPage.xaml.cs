@@ -66,7 +66,6 @@ namespace cclone
                     //Set label equal to result and value
                     try 
                     {
-
                     SearchCelebImage(faceConcepts.Concepts[0].Name); //Search image function
                     
 
@@ -126,13 +125,15 @@ namespace cclone
             if (imageResults != null)
             {
                 var firstImageResult = imageResults.Value.First();
+                var lastImageResult = imageResults.Value.Last();
+                celebImage.Source = lastImageResult.ContentUrl;
                 Console.WriteLine($"URL to the first image:\n\n {firstImageResult.ContentUrl}\n");
                 try
                 {
                     celebImage.Source = firstImageResult.ContentUrl;
                 } catch
                 {
-                    celebImage.Source = firstImageResult.ThumbnailUrl;
+                    celebImage.Source = lastImageResult.ContentUrl;
                 }
                
 

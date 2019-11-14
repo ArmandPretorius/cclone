@@ -35,6 +35,8 @@ namespace cclone
     public partial class MainPage : ContentPage
     {
 
+        public string celebName = "";
+
         public MainPage()
         {
             InitializeComponent();
@@ -43,15 +45,24 @@ namespace cclone
         //Use Clarifai AI to search for celebrity look alike
         public async void FindClone(string file)
         {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                // LoadingAnimation();
+                bgimageloading.IsVisible = true;
+                bgimageloading.ScaleTo(2, 3000);
+                bgimageloading.RelRotateTo(360, 30000);
+
+                titleResult.IsVisible = false;
+                descriptionText.IsVisible = false;
+                logoImage.IsVisible = false;
+                InfoButton.IsVisible = false;
+                ShareButton.IsVisible = false;
+                Pickbutton.IsVisible = false;
+                takeimagebutton.IsVisible = false;
+                percentageLabel.IsVisible = false;
+            });
             //loader.IsRunning = true;
-           LoadingAnimation();
-            
-            titleResult.IsVisible = false;
-            descriptionText.IsVisible = false;
-            logoImage.IsVisible = false;
-            InfoButton.IsVisible = false;
-            Pickbutton.IsVisible = false;
-            takeimagebutton.IsVisible = false;
+
 
             // var image = "https://samples.clarifai.com/celebrity.jpeg";
 
@@ -77,12 +88,35 @@ namespace cclone
 
 
                     titleResult.IsVisible = true;
+                    percentageLabel.IsVisible = true;
                     titleResult.HorizontalTextAlignment = TextAlignment.Center;
+                    titleResult.Margin = new Thickness(0, 30, 0, 0);
 
-                    titleResult.Text = faceConcepts.Concepts[0].Name.ToUpper();  //set title equal to celeb name
-                                                                       //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
 
-                    InfoButton.IsVisible = true;
+                    var percentage = (faceConcepts.Concepts[0].Value * 300);
+
+                    if (percentage > 100)
+                    {
+                        percentage = 100;
+                    } else if (percentage > 80)
+                    {
+                        percentage = 91;
+                    }
+                    else if (percentage > 60)
+                    {
+                        percentage = 82;
+                    } else
+                    {
+                        percentage = 75;
+                    }
+
+                    titleResult.Text = faceConcepts.Concepts[0].Name.ToUpper();
+                        
+                    percentageLabel.Text = percentage.ToString() + "%";  //set title equal to celeb name
+                                                                                 //+ " " + (faceConcepts.Concepts[0].Value * 1000).ToString() + "%";
+
+                    celebName = faceConcepts.Concepts[0].Name.ToUpperInvariant();
+                    ShareButton.IsVisible = true;
                     againbutton.IsVisible = true;
                     //
                     //if (faceConcepts.Concepts[0].Name == null || faceConcepts == null || faceConcepts.Concepts == null)
@@ -106,10 +140,14 @@ namespace cclone
             }
             //  await DisplayAlert("Celeb", $":( {titleResult.Text}.", "OK");
 
-            bgimage1.IsVisible = true;
+            Device.BeginInvokeOnMainThread( () =>
+            {
+                bgimage1.IsVisible = true;
 
-            await bgimage1.ScaleTo(3, 5000, Easing.SpringOut);
-            await bgimage1.RelRotateTo(10, 5000, Easing.SinInOut);
+                bgimage1.ScaleTo(3, 5000, Easing.SpringOut);
+                bgimage1.RelRotateTo(180, 30000, Easing.SinInOut);
+            });
+
         }
 
         //search celebrity photo with Azur Bing Image Search
@@ -139,46 +177,6 @@ namespace cclone
                 {
                     celebImage.Source = lastImageResult.ContentUrl;
                 }
-               
-
-                // image.Source = new UriImageSource(firstImageResult.ContentUrl);
-
-                //image.Source = new UriImageSource().FromUri(firstImageResult.ContentUrl);
-                //image.Source = FromUri(firstImageResult.ContentUrl);
-
-                //var imageSource = new UriImageSource { Uri = new Uri(firstImageResult.ContentUrl) };
-                //imageSource.CachingEnabled = false;
-                //imageSource.CacheValidity = TimeSpan.FromHours(1);
-                //image.Source = imageSource;
-
-
-                //PhotoStream = ImageSource.FromStream(() => MemoryStream(imageSource));
-
-                // image.Source = PhotoStream;
-
-                //var cool = new vmProduct
-                //{
-                //    ProductImage = new Uri(firstImageResult.ContentUrl)
-                //};
-
-                //image.Source = ImageSource.FromStream(() =>
-                //{
-                //    var stream = firstImageResult.ContentUrl.GetStream();
-                //    return stream;
-                //});
-
-                //var i = new BitmapImage(new Uri(firstImageResult.ContentUrl));
-                //i.ImageOpened += (s, e) =>
-                //{
-                //    image.CreateOptions = BitmapCreateOptions.None;
-                //    WriteableBitmap wb = new WriteableBitmap(i);
-                //    MemoryStream ms = new MemoryStream();
-                //    wb.SaveJpeg(ms, i.PixelWidth, i.PixelHeight, 0, 100);
-                //    byte[] imageBytes = ms.ToArray();
-                //};
-                //NLBI.Thumbnail.Source = i;
-
-                //image.Source = url;
             }
 
             StopLoadingAnimation();
@@ -270,14 +268,14 @@ namespace cclone
 
             CrossShare.Current.Share(new ShareMessage
             {
-                Title = "Motz Cod.es",
-                Text = "Checkout Motz Cod.es! for all sorts of goodies",
-                Url = "http://motzcod.es"
+                Title = "CCLONE",
+                Text = $"Wow! {celebName} is my celebrity clone! Who's yours? Find out by downloading CClone.",
+                Url = "https://github.com/ArmandPretorius/cclone/"
             },
             new ShareOptions
             {
-                ChooserTitle = "Share Blog",
-                ExcludedUIActivityTypes = new[] { ShareUIActivityType.PostToFacebook }
+                ChooserTitle = "Share Clone",
+                //ExcludedUIActivityTypes = new[] { ShareUIActivityType.PostToFacebook }
             });
         }
 
@@ -314,8 +312,12 @@ namespace cclone
             celebImage.Source = "";
             titleResult.HorizontalTextAlignment = TextAlignment.Start;
             titleResult.Text = "Find your";
+            titleResult.Margin = new Thickness(20, 30, 0, 0);
             logoImage.IsVisible = true;
             descriptionText.IsVisible = true;
+            ShareButton.IsVisible = false;
+            InfoButton.IsVisible = true;
+            percentageLabel.IsVisible = false;
         }
         
     }

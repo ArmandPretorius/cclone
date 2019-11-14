@@ -12,7 +12,8 @@
             NavigationPage.HasNavigationBar="False"
              >
     <StackLayout Padding="10">
-        <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="ShareButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
+        <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
+        <ImageButton Source="share" BackgroundColor="Transparent" x:Name="ShareButton" Clicked="ShareButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" IsVisible="False" />
         
         <Label x:Name="titleResult" Text="Welcome to" 
            VerticalOptions="Start" 
@@ -20,6 +21,12 @@
            FontSize="Large"
            Margin="20,30,0,0"
            HorizontalTextAlignment="Start"/>
+        <Label x:Name="percentageLabel" Text="0%" 
+           VerticalOptions="Start" 
+           TextColor="#D1E5FA"
+           FontSize="Large"
+           Margin="0,0,0,0"
+           HorizontalTextAlignment="Center" IsVisible="False"/>
         <Image x:Name="logoImage" 
                                         HorizontalOptions="StartAndExpand" 
                                         Aspect="Fill" 

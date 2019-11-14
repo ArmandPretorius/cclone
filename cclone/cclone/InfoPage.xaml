@@ -13,7 +13,7 @@
             <ImageButton Source="close" BackgroundColor="Transparent" x:Name="CloseButton" Clicked="CloseButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
             <Label Text="Terms and Conditions" TextColor="#D1E5FA" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="10,20,10,0"/>
             <Label TextColor="#D1E5FA" Margin="10,20,10,0" HorizontalTextAlignment="Center">
-                C Clone uses a Artificial Intelligence API, Clarifai, to find your Celebrity look-a-like. This AI compares your face to more than 10 000 celebrities and counting to find your clone.
+                C Clone uses an Artificial Intelligence API, Clarifai, to find your Celebrity look-a-like. This AI compares your face to more than 10 000 celebrities and counting to find your clone.
             </Label>
             <Label TextColor="#D1E5FA" Margin="10,10,10,0" HorizontalTextAlignment="Center">
                 For the AI to not make a mistake, they use the photo you take to improve the quality of finding people’s celebrity clone. By using C Clone, you give Clarifai concent to use your photo in non-commercial analytics and to improve their services.

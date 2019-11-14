@@ -24,6 +24,7 @@ namespace cclone
             Navigation.PopModalAsync();
         }
 
+        [Obsolete]
         private void Button_Clicked(object sender, EventArgs e)
         {
 

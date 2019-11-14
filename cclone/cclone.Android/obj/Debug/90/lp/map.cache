@@ -9,6 +9,7 @@ Lottie.Forms
 Plugin.CurrentActivity
 Plugin.Media
 Plugin.Permissions
+Plugin.Share
 SkiaSharp
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime

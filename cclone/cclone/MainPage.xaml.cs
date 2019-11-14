@@ -23,6 +23,10 @@ using Microsoft.Azure.CognitiveServices.Search.ImageSearch;
 using Microsoft.Azure.CognitiveServices.Search.ImageSearch.Models;
 using System.Net;
 
+//Share Plugin
+using Plugin.Share;
+using Plugin.Share.Abstractions;
+
 namespace cclone
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -256,6 +260,25 @@ namespace cclone
         {
             Navigation.PushModalAsync(new InfoPage());
            // LoadingAnimation();
+        }
+
+        //share function
+        public void ShareButton_Clicked(object sender, EventArgs e)
+        {
+            if (!CrossShare.IsSupported)
+                return;
+
+            CrossShare.Current.Share(new ShareMessage
+            {
+                Title = "Motz Cod.es",
+                Text = "Checkout Motz Cod.es! for all sorts of goodies",
+                Url = "http://motzcod.es"
+            },
+            new ShareOptions
+            {
+                ChooserTitle = "Share Blog",
+                ExcludedUIActivityTypes = new[] { ShareUIActivityType.PostToFacebook }
+            });
         }
 
         private void ResultAnimation()

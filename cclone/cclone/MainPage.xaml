@@ -12,7 +12,7 @@
             NavigationPage.HasNavigationBar="False"
              >
     <StackLayout Padding="10">
-        <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
+        <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="ShareButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
         
         <Label x:Name="titleResult" Text="Welcome to" 
            VerticalOptions="Start" 

@@ -11,7 +11,7 @@
             BackgroundImageSource="background"
             NavigationPage.HasNavigationBar="False"
              >
-    <StackLayout Padding="10">
+    <StackLayout Padding="10,10,10,30">
         <ImageButton Source="info" BackgroundColor="Transparent" x:Name="InfoButton" Clicked="InfoButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" />
         <ImageButton Source="share" BackgroundColor="Transparent" x:Name="ShareButton" Clicked="ShareButton_Clicked" HorizontalOptions="End" VerticalOptions="Start" Padding="0,10,10,0" IsVisible="False" />
         
@@ -95,13 +95,13 @@
            VerticalOptions="Start" 
            TextColor="#D1E5FA"
            FontSize="Small"
-           Margin="20,30,20,30"
+           Margin="20,30,20,15"
            HorizontalTextAlignment="Center"/>
         
        
-        <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent"/>
-        <Button x:Name="Pickbutton" Text="Pick Photo from Library" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA"/>
-        <Button x:Name="againbutton" Text="Again?" Clicked="Again_Clicked" BackgroundColor="Transparent" TextColor="#D1E5FA" IsVisible="False"/>
+        <ImageButton x:Name="takeimagebutton" Source="takePhoto" Clicked="Image_Clicked" BackgroundColor="Transparent" Margin="0,0,0,30"/>
+        <ImageButton x:Name="Pickbutton" Source="file" Clicked="Pickbutton_Clicked" BackgroundColor="Transparent"/>
+        <ImageButton x:Name="againbutton" Source="again" Clicked="Again_Clicked" BackgroundColor="Transparent" IsVisible="False"/>
     </StackLayout>
 
 </ContentPage>

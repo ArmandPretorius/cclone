@@ -15,7 +15,7 @@
     <a href="https://github.com/ArmandPretorius/cclone"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ArmandPretorius/cclone">View Demo</a>
+    <a href="https://youtu.be/-CkHLIKtVJ0">View Demo</a>
     ·
     <a href="https://github.com/ArmandPretorius/cclone/issues">Report Bug</a>
     ·

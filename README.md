@@ -1,4 +1,4 @@
-<!--Nudge README.MD-->
+<!--CClone README.MD-->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -17,9 +17,9 @@
     <br />
     <a href="https://github.com/ArmandPretorius/cclone">View Demo</a>
     ·
-    <a href="https://github.com/ArmandPretorius/nudge/issues">Report Bug</a>
+    <a href="https://github.com/ArmandPretorius/cclone/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ArmandPretorius/nudge/issues">Request Feature</a>
+    <a href="https://github.com/ArmandPretorius/cclone/issues">Request Feature</a>
   </p>
 </p>
 

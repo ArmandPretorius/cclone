@@ -1,4 +1,14 @@
 <!--CClone README.MD-->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 <!-- PROJECT LOGO -->
 <br />
@@ -31,20 +41,18 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
   * [Installation](#installation)
+* [Features](#features)
+  * [AI](#ai)
 * [Usage](#usage)
-  * [Logic](#logic)
-* [Changes](#changes)
+* [Logic](#logic)
+* [Contribution](#contribution)
+* [License](#license)
+* [Challenges](#challenges)
 * [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-|  |  |  |
-| --- | --- | --- |
-| <img src="screenshots/home_screenshot.jpg" alt="About Project CClone" width="180"> | <img src="screenshots/search_screenshot.jpg" alt="About Project CClone" width="180"> | <img src="screenshots/result_screenshot.jpg" alt="About Project CClone" width="180"> |
-
-
-
-
+<img src="screenshots/intro.png" alt="About Project CClone">
 
 CClone is an Android application that uses Artificial Intelligence to find your celebrity look-alike. All you need to do is take a photo or select one from your camera roll.
 
@@ -55,7 +63,8 @@ The project also uses one of <a href="https://azure.microsoft.com/en-us/services
 ### Built With
 This Android application was build using:
 * [Xamarin Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
-
+* [C#](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
+* [Clarifai](https://www.clarifai.com/)
 
 ### Installation
 
@@ -65,6 +74,27 @@ This Android application was build using:
 git clone https:://github.com/ArmandPretorius/cclone.git
 ```
 3. Then open the project in Visual Studio
+
+<!-- FEATURES -->
+## Features
+
+### AI
+
+<img src="screenshots/snap.png" alt="CClone userflow">
+
+Take a photo or select one from your camera roll and find your celebritry clone!
+
+### Share
+
+<img src="screenshots/share.png" alt="CClone userflow">
+
+Share with your friends who your celebrity clone is with a link to the app.
+
+### Privacy Terms & Conditions
+
+<img src="screenshots/info.png" alt="CClone userflow">
+
+Have complete transparency with what your images will be used for by reading the Terms and Conditions
 
 <!-- USAGE -->
 ## Usage
@@ -77,6 +107,9 @@ You can then select an "Again?" button to take another picture.
 
 There is also an information button in the top right corner that opens a Terms and Conditions modal, which explains Clarifai's <a href="https://www.clarifai.com/privacy">Privacy Policy</a> in regards of using your images.
 
+<img src="screenshots/userflow.png" alt="CClone userflow">
+
+To see a run through of the application, click below:
 
 [View Demo](https://youtu.be/-CkHLIKtVJ0)
 <!-- HOW DOES IT WORK -->
@@ -95,8 +128,6 @@ There is also an information button in the top right corner that opens a Terms a
 <!-- Changes Made -->
 ## Changes
 
-* I want to include the ability to share an image of who your clone is with a link to the app.
-
 * I struggled with the animations. When the API requests are made, the animations break.
 
 * I also would like to display more than one match (second and third match).
@@ -104,18 +135,50 @@ There is also an information button in the top right corner that opens a Terms a
 * I'd also like to finish it for iOS as well.
 
 
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/YourAmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/YourAmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
 <!-- CONTACT -->
 ## Contact
 
-Armand Pretorius - 170045@virtualwindow.co.za
+Armand Pretorius - [@amplified_designs](https://www.instagram.com/amplified_designs/) - 170045@virtualwindow.co.za
+
 
 Project Link: [https://github.com/ArmandPretorius/cclone](https://github.com/ArmandPretorius/cclone)
 
 
 
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: cclone_screenshot.png
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/ArmandPretorius/cclone.svg?style=flat-square
+[contributors-url]: https://github.com/ArmandPretorius/cclone/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ArmandPretorius/cclone.svg?style=flat-square
+[forks-url]: https://github.com/ArmandPretorius/cclone/network/members
+[stars-shield]: https://img.shields.io/github/stars/ArmandPretorius/cclone.svg?style=flat-square
+[stars-url]: https://github.com/ArmandPretorius/cclone/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ArmandPretorius/cclone.svg?style=flat-square
+[issues-url]: https://github.com/ArmandPretorius/cclone/issues
+[license-shield]: https://img.shields.io/github/license/ArmandPretorius/cclone.svg?style=flat-square
+[license-url]: https://github.com/ArmandPretorius/cclone/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/armand-pretorius-293b3a18a
+
